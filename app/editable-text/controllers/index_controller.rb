@@ -1,29 +1,22 @@
 module EditableText
   class IndexController < ModelController
-    model :page
-
-    attr_reader :data
     attr_accessor :section
 
-    def initialize(data)
-      super
-  
-      @data = data
-  
+    def index
       @toggled = ReactiveValue.new(false)
     end
 
     def toggled
       @toggled
     end
-    
+
     def body_element
       Element.find('body')
     end
 
     def toggle_editing
       controller._toggled = (!controller._toggled).cur
-      
+
       if controller._toggled.cur
         # Editing enabled, bind a listener for when they click on the document to disable
         # it again.
@@ -44,7 +37,7 @@ module EditableText
     def edit(event)
       if event.key_code == 13
         event.stop
-    
+
         toggle_editing
       end
     end

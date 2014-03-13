@@ -1,6 +1,6 @@
 <:Body>
   {#if controller._toggled}
-    <input type="text" e-keypress="edit(event)" value="{data.value}" />
+    <input type="text" e-keypress="edit(event)" value="{@value}" />
   {#else}
-    <span e-click="toggle_editing">{data.value}</span>
+    <span e-click="toggle_editing">{@value}</span>
   {/}
