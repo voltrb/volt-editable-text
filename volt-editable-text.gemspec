@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.name          = "volt-editable-text"
   spec.version       = version
   spec.authors       = ["Ryan Stout"]
-  spec.email         = ["ryanstout@gmail.com"]
+  spec.email         = ["ryan@agileproductions.com"]
   spec.summary       = %q{Volt component that gives a :editable-text control which shows text, and lets you edit the text when it is clicked on.}
   spec.homepage      = ""
   spec.license       = "MIT"
