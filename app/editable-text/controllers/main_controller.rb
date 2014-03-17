@@ -1,5 +1,5 @@
 module EditableText
-  class IndexController < ModelController
+  class MainController < ModelController
     attr_accessor :section
 
     def index
