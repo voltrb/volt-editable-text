@@ -53,5 +53,10 @@ module EditableText
     def value
       return attrs.value
     end
+
+    def size
+      return attrs.value.size
+    end
+
   end
 end
