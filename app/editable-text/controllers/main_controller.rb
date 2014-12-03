@@ -1,13 +1,14 @@
 module EditableText
   class MainController < ModelController
     attr_accessor :section
+    reactive_accessor :toggled
 
     def index
-      @toggled = ReactiveValue.new(false)
+      controller._toggled = false
     end
 
     def toggled
-      @toggled
+      controller._toggled
     end
 
     def body_element
@@ -15,9 +16,9 @@ module EditableText
     end
 
     def toggle_editing
-      controller._toggled = (!controller._toggled).cur
+      controller._toggled = !controller._toggled
 
-      if controller._toggled.cur
+      if controller._toggled
         # Editing enabled, bind a listener for when they click on the document to disable
         # it again.
         body_element.on('click.editabletext') do |event|
@@ -36,10 +37,26 @@ module EditableText
 
     def edit(event)
       if event.key_code == 13
-        event.stop
+        #for some reason .stop or stop_propagation thow the following error: 
+        #undefined method `stop_propagation' for #<Volt::JSEvent:7672>
+        
+        #event.stop_propagation
 
         toggle_editing
       end
     end
+
+    def value=(newvalue)
+      attrs.value = newvalue
+    end
+
+    def value
+      return attrs.value
+    end
+
+    def size
+      return attrs.value.size
+    end
+
   end
 end
