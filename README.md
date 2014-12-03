@@ -18,4 +18,4 @@ Then require it as a component in any components' dependencies.rb you want to us
     
 Finally, use the tag.
 
-    <:editable-text value="{_some_value}" />
+    <:editable-text value="{{_some_value}}" />
