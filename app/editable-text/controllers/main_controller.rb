@@ -1,5 +1,5 @@
 module EditableText
-  class MainController < ModelController
+  class MainController < Volt::ModelController
     attr_accessor :section
     reactive_accessor :toggled
 
