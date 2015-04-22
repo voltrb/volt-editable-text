@@ -1,5 +1,7 @@
 # Volt Editable Text Component
 
+**Note** Currently this only supports Volt 0.8.x, updates for 0.9.x coming soon.
+
 Provides a component that displays text, but becomes editable in a field when clicked on.
 
 ## Usage
