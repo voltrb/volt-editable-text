@@ -8,7 +8,7 @@ Provides a component that displays text, but becomes editable in a field when cl
 
 Add this line to your application's Gemfile:
 
-    gem 'volt-editable-text'
+    gem 'volt-editable_text'
 
 And then execute:
 
@@ -16,8 +16,8 @@ And then execute:
 
 Then require it as a component in any components' dependencies.rb you want to use it in.
 
-    component 'editable-text'
-    
+    component 'editable_text'
+
 Finally, use the tag.
 
-    <:editable-text value="{{_some_value}}" />
+    <:editable_text value="{{_some_value}}" />

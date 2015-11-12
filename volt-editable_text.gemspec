@@ -2,15 +2,14 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-version = File.read(File.expand_path('../VERSION', __FILE__)).strip
-
+require 'volt/editable_text'
 
 Gem::Specification.new do |spec|
-  spec.name          = "volt-editable-text"
-  spec.version       = version
+  spec.name          = "volt-editable_text"
+  spec.version       = Volt::EditableText::VERSION
   spec.authors       = ["Ryan Stout"]
   spec.email         = ["ryan@agileproductions.com"]
-  spec.summary       = %q{Volt component that gives a :editable-text control which shows text, and lets you edit the text when it is clicked on.}
+  spec.summary       = %q{Volt component that gives a :editable_text control which shows text, and lets you edit the text when it is clicked on.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
